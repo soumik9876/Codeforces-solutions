@@ -71,4 +71,3 @@ bool checkcolumn(char s[])
     }
     return true;
 }
-
