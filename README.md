@@ -1,2 +1,2 @@
 Just some codeforces problem solutions.
-My codeforcse handle soumik9876. 
+My codeforces handle-soumik9876. 
