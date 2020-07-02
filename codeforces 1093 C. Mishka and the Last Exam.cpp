@@ -29,7 +29,27 @@ int main()
 //    #ifdef _soumik
 //        freopen("input.txt", "r", stdin);
 //    #endif
-
+    ll n;
+    vll a;
+    deque<ll> dq1,dq2;
+    cin>>n;
+    for(ll i=0,temp;i<n/2;i++)
+    {
+        cin>>temp;
+        a.eb(temp);
+    }
+    ll r=(n/2)-1;
+    dq1.pb(0),dq2.pb(a[0]);
+    for(ll i=1;i<=r;i++)
+    {
+        dq2.push_front(min(a[i]-dq1.back(),dq2.front()));
+        dq1.push_back(max(dq1.back(),a[i]-dq2.front()));
+    }
+    for(auto i:dq1)
+        cout<<i<< " ";
+    for(auto i:dq2)
+        cout<<i<< " ";
+    cout<<endl;
     return 0;
 }
 

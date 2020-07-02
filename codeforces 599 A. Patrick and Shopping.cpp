@@ -29,7 +29,12 @@ int main()
 //    #ifdef _soumik
 //        freopen("input.txt", "r", stdin);
 //    #endif
-
+    ll a,b,c;
+    cin>>a>>b>>c;
+    if(a+b<c)
+        cout<<2*a+2*b<<endl;
+    else
+        cout<<2*min(a,b)+max(a,b)+c<<endl;
     return 0;
 }
 

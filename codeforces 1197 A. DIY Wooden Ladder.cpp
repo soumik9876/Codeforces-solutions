@@ -29,7 +29,25 @@ int main()
 //    #ifdef _soumik
 //        freopen("input.txt", "r", stdin);
 //    #endif
-
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        ll n;
+        vll a;
+        cin>>n;
+        for(int i=0,temp;i<n;i++)
+        {
+            cin>>temp;
+            a.eb(temp);
+        }
+        sort(all(a));
+        ll cnt=0,mx1=a[n-2]-1;
+        if(n<3)
+            cout<<0<<endl;
+        else
+            cout<<min(mx1,n-2)<<endl;
+    }
     return 0;
 }
 

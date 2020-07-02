@@ -29,7 +29,22 @@ int main()
 //    #ifdef _soumik
 //        freopen("input.txt", "r", stdin);
 //    #endif
-
+    ll n,k;
+    cin>>n>>k;
+    vi cnt(k+10);
+    for(ll i=0,temp;i<n;i++)
+    {
+        cin>>temp;
+        cnt[temp]++;
+    }
+    ll sets=ceil((double)n/2),total=0;
+    for(ll i=1;i<=k;i++)
+    {
+        total+=(cnt[i]-cnt[i]%2);
+        sets-=(cnt[i]-cnt[i]%2)/2;
+    }
+    cout<<total+sets<<endl;
     return 0;
 }
+
 

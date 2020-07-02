@@ -29,7 +29,24 @@ int main()
 //    #ifdef _soumik
 //        freopen("input.txt", "r", stdin);
 //    #endif
-
+    int n;
+    vll a;
+    cin>>n;
+    for(ll i=0,temp;i<n;i++)
+    {
+        cin>>temp;
+        a.eb(temp);
+    }
+    for(int i=1;i<n-1;i++)
+    {
+        if(a[i-1]>=a[i] && a[i+1]>=a[i])
+        {
+            cout<<"NO"<<endl;
+            return 0;
+        }
+    }
+    cout<<"YES"<<endl;
     return 0;
 }
+
 

@@ -1,15 +1,10 @@
 #include<bits/stdc++.h>
-#define time clock_t tStart = clock();
-#define show printf("Time taken: %.6fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
 #define ll                    long long int
-#define loop(a,b)             for(int i=a;i<=b;++i)
-#define count_1(n)            __builtin_popcountll(n)
 #define pb                    push_back
 #define F                     first
 #define S                     second
 #define mp                    make_pair
 #define MOD                   1000000007
-#define itoc(c)               ((char)(((int)'0')+c))
 #define vi                    vector<int>
 #define vll                   vector<ll>
 #define pll                   pair<ll,ll>
@@ -30,6 +25,14 @@ int main()
 //        freopen("input.txt", "r", stdin);
 //    #endif
 
+    ll t,a,b,c;
+    cin>>t;
+    while(t--)
+    {
+        cin>>a>>b>>c;
+        cout<<(a+b+c)/2<<endl;
+    }
     return 0;
 }
+
 

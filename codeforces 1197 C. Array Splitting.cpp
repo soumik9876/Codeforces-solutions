@@ -29,7 +29,35 @@ int main()
 //    #ifdef _soumik
 //        freopen("input.txt", "r", stdin);
 //    #endif
-
+    ll temp,temp1,n,k,mn=INT_MAX,cnt=0,total=0;
+    vll a,segs;
+    vector< pair<ll,ll> > diff;
+    cin>>n>>k>>temp;
+    a.eb(temp);
+    for(ll i=1;i<n;i++)
+    {
+        cin>>temp1;
+        a.eb(temp1);
+        diff.eb(temp1-temp,i-1);
+        temp=temp1;
+    }
+    sort(all(diff),greater<pair<ll,ll>> ());
+    segs.eb(-1);
+    for(int i=0;i<k-1;i++)
+    {
+        segs.eb(diff[i].S);
+    }
+    sort(all(segs));
+//    for(auto i:segs)
+//        cout<<i<<endl;
+    for(int i=1;i<k;i++)
+    {
+        total+=a[segs[i]]-a[segs[i-1]+1];
+        //cout<<total<<endl;
+    }
+    total+=(a[n-1]-a[segs[segs.size()-1]+1]);
+    cout<<total<<endl;
     return 0;
 }
+
 
