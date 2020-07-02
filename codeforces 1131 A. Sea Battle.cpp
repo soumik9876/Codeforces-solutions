@@ -24,9 +24,6 @@ int main()
     freopen("output.txt","w",stdout);
     // ios_base::sync_with_stdio(false);
     // cin.tie(NULL);
-    int w1,h1,w2,h2;
-    cin>>w1>>h1>>w2>>h2;
-    w1=max(w1,w2);
-    cout<<2*(h1+h2)+4+(2*w1)<<endl;
+    cout<<"any";
     return 0;
 }
