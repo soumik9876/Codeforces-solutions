@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long long int n,flag = 0,sum=0;
+        cin>>n;
+        vector<int>a(n);
+        for(int i=0;i<n;i++)
+        {
+            cin>>a[i];
+            sum = sum + a[i];
+        }
+        if(sum%n != 0)
+        {
+            cout<<"-1"<<endl;
+        }
+        else{
+            int k = sum/n;
+
+            //i have to count the total number of elements which have
+            //value greater than k.
+
+            int count = 0;
+            for(int i=0;i<n;i++)
+            {
+                if(a[i] > k)
+                    count++;
+            }
+            cout<<count<<endl;
+        }
+ 
+ 
+ 
+    }
+}
